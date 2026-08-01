@@ -23,9 +23,8 @@ spec:
 
       - name: fastapi
 
-        image: sre-playground:v1
-
-        imagePullPolicy: Never
+        image: ghcr.io/<github-username>/<repo>:latest  
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 8000
