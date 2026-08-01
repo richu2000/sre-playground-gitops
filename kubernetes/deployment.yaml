@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: sre-playground
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: sre-playground
+
+  template:
+
+    metadata:
+      labels:
+        app: sre-playground
+
+    spec:
+
+      containers:
+
+      - name: fastapi
+
+        image: sre-playground:v1
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 8000
