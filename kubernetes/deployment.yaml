@@ -23,7 +23,7 @@ spec:
 
       - name: fastapi
 
-        image: ghcr.io/<github-username>/<repo>:latest  
+        image: ghcr.io/richu2000/my-project-r:latest 
         imagePullPolicy: Always
 
         ports:
