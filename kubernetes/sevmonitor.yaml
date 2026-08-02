@@ -1,0 +1,25 @@
+apiVersion: monitoring.coreos.com/v1
+
+kind: ServiceMonitor
+
+metadata:
+
+  name: sre-playground
+
+  namespace: monitoring
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      app: sre-playground
+
+  endpoints:
+
+  - port: http
+
+    path: /metrics
+
+    interval: 15s
